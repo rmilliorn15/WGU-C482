@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="587.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPartController">
+   <children>
+      <Label layoutX="81.0" layoutY="106.0" text="ID" />
+      <Label layoutX="82.0" layoutY="145.0" text="Name" />
+      <Label layoutX="85.0" layoutY="185.0" text="Inv" />
+      <Label layoutX="82.0" layoutY="231.0" text="Price/Cost" />
+      <Label layoutX="82.0" layoutY="274.0" text="Max" />
+      <Label fx:id="machineIdCompanyName" layoutX="79.0" layoutY="319.0" text="Machine ID" />
+      <Label layoutX="349.0" layoutY="274.0" text="Min" />
+      <TextField fx:id="inhousePartId" disable="true" editable="false" layoutX="173.0" layoutY="102.0" />
+      <TextField fx:id="inhouseNameText" layoutX="173.0" layoutY="141.0" promptText="Ex. Brakes" />
+      <TextField fx:id="inhouseInvText" layoutX="173.0" layoutY="181.0" promptText="ex. 15" />
+      <TextField fx:id="inhousePriceText" layoutX="173.0" layoutY="227.0" promptText="Ex. 12.99" />
+      <TextField fx:id="inhouseInvMaxText" layoutX="173.0" layoutY="270.0" promptText="Ex. 20" />
+      <TextField fx:id="inhouseInvMinText" layoutX="391.0" layoutY="270.0" promptText="Ex. 1" />
+      <TextField fx:id="machineIdText" layoutX="173.0" layoutY="315.0" promptText="Ex. 111" />
+      <Button layoutX="262.0" layoutY="376.0" mnemonicParsing="false" onAction="#saveBtnAction" text="Save" />
+      <Button layoutX="383.0" layoutY="376.0" mnemonicParsing="false" onAction="#cancelBtnAction" text="Cancel" />
+      <Label layoutX="73.0" layoutY="48.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="inHouseRadio" layoutX="233.0" layoutY="53.0" mnemonicParsing="false" onAction="#InhouseRadioBtn" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="tGroup" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="outsourcedRadio" layoutX="409.0" layoutY="53.0" mnemonicParsing="false" onAction="#OutsourcedRadioBtn" text="Outsourced" toggleGroup="$tGroup" />
+
+   </children>
+</AnchorPane>
